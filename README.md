@@ -1,19 +1,21 @@
-# 📘 Proyecto: Línea aérea BT&Airways - Semana 2
+# 📘 Proyecto: Holding-Carpenter-SPA - Semana 7
 
 ## 📝 Descripción general del sistema
 
-El proyecto consiste en diseñar el modelo entidad–relación de un sistema de reservas de vuelos para la aerolínea BT&Airways, que quiere ordenar y centralizar toda la información asociada a su operación de transporte de pasajeros. La base de datos debe permitir registrar pasajeros, reservas, vuelos, aviones, empleados (pilotos y administrativos), AFP y equipajes, respetando las reglas de negocio dadas.
+En esta semana se implementa, en Oracle, la base de datos relacional del sistema de gestión de personal del Holding Carpenter SPA.  
+El objetivo es crear las tablas, restricciones y poblamiento inicial a partir del modelo relacional entregado, y luego generar consultas para análisis de renta promedio por compañía.
 
 ### Objetivo general
 
-Modelar conceptualmente, mediante un MER, el proceso de reserva y venta de vuelos de la aerolínea, de forma que más adelante pueda implementarse una base de datos relacional eficiente, consistente y escalable para decenas de miles de vuelos.
+Implementar mediante sentencias DDL y DML el modelo relacional normalizado del Holding Carpenter SPA, asegurando integridad referencial, aplicación de reglas de negocio (CHECK, UNIQUE) y soporte para consultas de simulación de rentas.
 
 ### Alcance del modelo
 
-- Representar a los pasajeros, sus datos personales y su posible equipaje.
-- Modelar las reservas de vuelos, incluyendo fechas, estado (confirmada o nula) y el vuelo asociado.
-- Describir los vuelos y los aviones que los operan, con su capacidad de asientos.
-- Registrar los empleados, distinguiendo entre pilotos y administrativos, y sus datos laborales (RUT, sueldo, horas de vuelo u horas extras, AFP).
+- Crear las tablas: `PERSONAL`, `COMPANIA`, `COMUNA`, `REGION`, `ESTADO_CIVIL`, `GENERO`, `TITULO`, `TITULACION`, `DOMINIO`, `IDIOMA`.
+- Definir claves primarias, foráneas, únicas y restricciones CHECK (email único, sueldo mínimo, dígito verificador del RUN).
+- Configurar columnas IDENTITY para `IDIOMA` y `REGION`, y secuencias para `COMUNA` y `COMPANIA` para el poblamiento.
+- Poblar las tablas `IDIOMA`, `REGION`, `COMUNA` y `COMPANIA` con los datos indicados en la guía.
+- Desarrollar consultas SQL para los informes 1 y 2 de simulación de renta promedio.
 
 ---
 ## 👤 Autores del proyecto
